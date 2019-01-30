@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractorCore", "ContractorCore\ContractorCore.csproj", "{60A3B236-FB51-41A9-9F7D-D7CFF07FCB8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractorConsole", "ContractorConsole\ContractorConsole.csproj", "{BEA785D2-E652-44A8-8CD1-35E049096BD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60A3B236-FB51-41A9-9F7D-D7CFF07FCB8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A3B236-FB51-41A9-9F7D-D7CFF07FCB8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A3B236-FB51-41A9-9F7D-D7CFF07FCB8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A3B236-FB51-41A9-9F7D-D7CFF07FCB8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA785D2-E652-44A8-8CD1-35E049096BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA785D2-E652-44A8-8CD1-35E049096BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA785D2-E652-44A8-8CD1-35E049096BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA785D2-E652-44A8-8CD1-35E049096BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB8D50D5-C90A-4C89-9B6C-4A417861066F}
+	EndGlobalSection
+EndGlobal
