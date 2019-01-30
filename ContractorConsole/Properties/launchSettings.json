@@ -2,7 +2,7 @@
   "profiles": {
     "ContractorConsole": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\a.hofland\\Google Drive\\WorkSync\\Contractor\\Contractor\\ContractorConsole\\bin\\Debug\\netcoreapp2.0"
+      "workingDirectory": "D:\\git\\Contractor\\ContractorConsole\\bin\\Debug\\netcoreapp2.0"
     }
   }
 }

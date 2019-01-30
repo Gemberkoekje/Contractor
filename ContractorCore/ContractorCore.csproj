@@ -8,10 +8,4 @@
     <PackageReference Include="MongoDB.Driver" Version="2.7.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="mongod.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

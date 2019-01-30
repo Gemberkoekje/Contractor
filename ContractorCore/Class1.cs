@@ -50,8 +50,10 @@ namespace ContractorCore
             {
                 throw new Exception(e.Message);
             }
-            var document = collection.Find(new BsonDocument()).FirstOrDefault();
-            Console.WriteLine(document.ToString());
+            foreach (var document in collection.Find(new BsonDocument()).ToList())
+            {
+                Console.WriteLine(document.ToBsonDocument().ToString());
+            }
         }
     }
 }

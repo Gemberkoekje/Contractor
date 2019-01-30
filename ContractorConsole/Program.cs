@@ -1,6 +1,7 @@
 ﻿using ContractorCore;
 using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace ContractorConsole
 {
@@ -9,16 +10,24 @@ namespace ContractorConsole
         static Process mongod;
         static void Main(string[] args)
         {
+            (new FileInfo(".\\save\\")).Directory.Create();
             Console.WriteLine("Hello World!");
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = @"mongod.exe";
             start.WindowStyle = ProcessWindowStyle.Hidden;
 
-            start.Arguments = "--dbpath .\\";
+            start.Arguments = "--dbpath .\\save\\";
 
             mongod = Process.Start(start);
-
-            var t = new Class1();
+            try
+            {
+                var t = new Class1();
+            }
+            finally
+            {
+                mongod.Kill();
+            }
+            Console.Read();
 
         }
         static void CurrentDomain_ProcessExit(object sender, EventArgs e)
