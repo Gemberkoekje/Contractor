@@ -10,9 +10,6 @@ namespace ContractorCore
     {
         public Class1()
         {
-            var map1 = BsonClassMap.RegisterClassMap<Location>();
-            var map2 = BsonClassMap.RegisterClassMap<Contractor>();
-
             var collection = DataProvider.GetDatabase().GetCollection<Contractor>("Contractors");
             var location = new Location()
             {
@@ -20,7 +17,7 @@ namespace ContractorCore
                 LocationType = LocationType.Continent
             };
             var test = new MongoDbRef<Location>();
-            test.Set(location);
+            test.SetAndInsert(location);
             var contractor = new Contractor() { Name = "Test", Location = test };
             try
             {
