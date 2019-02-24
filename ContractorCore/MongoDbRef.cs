@@ -5,9 +5,9 @@ using System;
 
 namespace ContractorCore
 {
-    public class MongoDbRef<T> where T : MongoDbTable
+    public class MongoDbRef<T> where T : MongoDbTable<T>
     {
-        private ObjectId ID;
+        public ObjectId ID { private set; get; }
         public T Get()
         {
             CheckRegistered();
