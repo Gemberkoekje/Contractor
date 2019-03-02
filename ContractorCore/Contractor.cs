@@ -6,5 +6,6 @@ namespace ContractorCore
     {
         public string Name;
         public MongoDbRef<Location> Location;
+        public decimal Money;
     }
 }

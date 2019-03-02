@@ -1,6 +1,6 @@
 ﻿namespace ContractorCore
 {
-    public class Commodity
+    public class Commodity : MongoDbTable<Commodity>
     {
         public string Name;
     }

@@ -1,8 +1,9 @@
 ﻿namespace ContractorCore
 {
-    public class Government
+    public class Government : MongoDbTable<Government>
     {
-        public Location Location;
+        public MongoDbRef<Location> Location;
         public int Population;
+        public decimal Money;
     }
 }

@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace ContractorCore
 {
-    public class MongoDbTable<T>
+    public class MongoDbTable<T> where T : MongoDbTable<T>
     {
         public ObjectId _id;
 
@@ -25,6 +25,12 @@ namespace ContractorCore
         {
             var collection = DataProvider.GetDatabase().GetCollection<T>(typeof(T).ToString());
             collection.InsertOne(insertval);
+        }
+        public static void Update(T insertval)
+        {
+            var collection = DataProvider.GetDatabase().GetCollection<T>(typeof(T).ToString());
+            var update = Builders<T>.Update.Set(u => u, insertval);
+            collection.UpdateOne(Builders<T>.Filter.Eq(f => f._id, insertval._id), update);
         }
         public static void Delete(Expression<Func<T, bool>> filter)
         {

@@ -7,6 +7,21 @@ namespace ContractorCore
 {
     public class MongoDbRef<T> where T : MongoDbTable<T>
     {
+        public MongoDbRef()
+        {
+
+        }
+        public MongoDbRef(ObjectId id)
+        {
+            ID = id;
+        }
+        public MongoDbRef(T value)
+        {
+            if (value._id == ObjectId.Empty)
+                SetAndInsert(value);
+            else
+                Set(value._id);
+        }
         public ObjectId ID { private set; get; }
         public T Get()
         {
@@ -18,7 +33,7 @@ namespace ContractorCore
         {
             CheckRegistered();
             var collection = DataProvider.GetDatabase().GetCollection<T>(typeof(T).ToString());
-            if (value._id == null)
+            if (value._id == ObjectId.Empty)
                 value._id = ObjectId.GenerateNewId();
             collection.InsertOne(value);
             ID = value._id;
@@ -27,7 +42,7 @@ namespace ContractorCore
         {
             CheckRegistered();
             var collection = DataProvider.GetDatabase().GetCollection<T>(typeof(T).ToString());
-            if (value._id == null)
+            if (value._id == ObjectId.Empty)
                 throw new NotSupportedException("ID needs to be set");
             ID = value._id;
             var update = Builders<T>.Update.Set(u => u, value);

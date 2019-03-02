@@ -2,11 +2,11 @@
 
 namespace ContractorCore
 {
-    public class Activity
+    public class Activity : MongoDbTable<Activity>
     {
         public string Name;
-        public Commodity Result;
-        public List<Commodity> Input;
+        public MongoDbRef<CommodityWithAmount> Result;
+        public List<MongoDbRef<CommodityWithAmount>> Input;
         public decimal Effectiveness;
         public int Labor;
     }
