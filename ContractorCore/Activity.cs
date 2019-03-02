@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using MongoDB.Bson;
+using System.Collections.Generic;
 
 namespace ContractorCore
 {
-    public class Activity : MongoDbTable<Activity>
+    public class Activity
     {
+        public ObjectId _id;
         public string Name;
-        public MongoDbRef<CommodityWithAmount> Result;
-        public List<MongoDbRef<CommodityWithAmount>> Input;
+        public ObjectId Result;
+        public List<ObjectId> Input;
         public decimal Effectiveness;
         public int Labor;
     }

@@ -5,10 +5,9 @@ using System.Text;
 
 namespace ContractorCore
 {
-    public class CommodityWithAmount
+    public class General
     {
         public ObjectId _id;
-        public ObjectId Commodity;
-        public int Amount;
+        public bool Initialized;
     }
 }

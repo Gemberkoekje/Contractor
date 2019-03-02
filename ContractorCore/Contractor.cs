@@ -2,10 +2,12 @@
 
 namespace ContractorCore
 {
-    public class Contractor : MongoDbTable<Contractor>
+    public class Contractor
     {
+        public ObjectId _id;
         public string Name;
-        public MongoDbRef<Location> Location;
+        public ObjectId Location;
         public decimal Money;
+        public decimal ProfitPercentage;
     }
 }

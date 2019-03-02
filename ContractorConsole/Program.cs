@@ -15,6 +15,7 @@ namespace ContractorConsole
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = @"mongod.exe";
             start.WindowStyle = ProcessWindowStyle.Hidden;
+            start.CreateNoWindow = true;
 
             start.Arguments = "--dbpath .\\save\\";
 

@@ -1,7 +1,10 @@
-﻿namespace ContractorCore
+﻿using MongoDB.Bson;
+
+namespace ContractorCore
 {
-    public class Commodity : MongoDbTable<Commodity>
+    public class Commodity
     {
+        public ObjectId _id;
         public string Name;
     }
 }

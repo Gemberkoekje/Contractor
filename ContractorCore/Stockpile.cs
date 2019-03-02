@@ -1,13 +1,16 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ContractorCore
 {
-    public class Stockpile : MongoDbTable<Stockpile>
+    public class Stockpile
     {
-        public MongoDbRef<Commodity> Commodity;
-        public MongoDbRef<Location> Location;
+        public ObjectId _id;
+        public ObjectId Commodity;
+        public ObjectId Location;
+        public ObjectId Contractor;
         public int Amount;
         public decimal CurrentPrice;
         public decimal ManufactoryPrice;

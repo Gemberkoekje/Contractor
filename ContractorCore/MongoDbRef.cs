@@ -5,17 +5,17 @@ using System;
 
 namespace ContractorCore
 {
-    public class MongoDbRef<T> where T : MongoDbTable<T>
+    public class NOMongoDbRef<T> where T : NOMongoDbTable<T>
     {
-        public MongoDbRef()
+        public NOMongoDbRef()
         {
 
         }
-        public MongoDbRef(ObjectId id)
+        public NOMongoDbRef(ObjectId id)
         {
             ID = id;
         }
-        public MongoDbRef(T value)
+        public NOMongoDbRef(T value)
         {
             if (value._id == ObjectId.Empty)
                 SetAndInsert(value);

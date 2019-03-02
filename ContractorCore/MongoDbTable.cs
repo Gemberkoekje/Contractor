@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace ContractorCore
 {
-    public class MongoDbTable<T> where T : MongoDbTable<T>
+    public class NOMongoDbTable<T> where T : NOMongoDbTable<T>
     {
         public ObjectId _id;
 

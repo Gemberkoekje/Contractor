@@ -1,8 +1,11 @@
-﻿namespace ContractorCore
+﻿using MongoDB.Bson;
+
+namespace ContractorCore
 {
-    public class Location : MongoDbTable<Location>
+    public class Location
     {
-        public Location ParentLocation;
+        public ObjectId _id;
+        public ObjectId ParentLocation;
 
         public string Name;
         public LocationType LocationType;
